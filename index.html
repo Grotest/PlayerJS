@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The best decision of your life </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./assets/scss/reset.css">
+    <link rel="stylesheet" href="./assets/scss/styles.css">
+</head>
+<body>
+    <div class="root">
+        <h1> Music Player </h1>
+        <main class="app">
+            <div class="content">
+                <div class="handling">
+                    <div class="handling-song" title="Volume">
+                        <svg class="icon-sound">
+                            <use xlink:href="./assets/images/sprite.svg#sound"></use>
+                        </svg>
+
+                        <div class="volume"> 
+                            <input 
+                                min="0"
+                                max="1"
+                                step="0.1"
+                                type="range"
+                                valume="0.5"
+                                name="volume" 
+                                class="controls-volume"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="handling-repeat" title="Repeat">
+                        <svg class="icon-sound">
+                            <use xlink:href="./assets/images/sprite.svg#repeat"></use>
+                        </svg>
+                    </div>
+
+                    <div class="handling-shuffle" title="Shuffle">
+                        <svg class="icon-shuffle">
+                            <use xlink:href="./assets/images/sprite.svg#shuffle"></use>
+                        </svg>
+                    </div>
+                </div>
+                    <div class="current">
+                        <div
+                            class="current-image"
+                            style="background-image: url(./assets/images/beat1.jpg);"
+                        ></div>
+                    
+                        <div class="current-info">
+                            <div class="current-info__top">
+                                <div class="current-info_titles">
+                                    <h2 class="current-info__group"> NF </h2>
+                                    <h3 class="current-info__track"> NF2 </h3>
+                                </div>
+                                <div class="current-info__year"> 2023 </div>
+                            </div>
+                      
+
+                            <div class="controls">
+                                <div class="controls-buttons">
+                                    <button class="controls-button controls-prev">
+                                        <svg class="icon-arrow">
+                                            <use xlink:href="./assets/images/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+    
+                                    <button class="controls-button controls-play">
+                                        <svg class="icon-pause">
+                                            <use xlink:href="./assets/images/sprite.svg#pause"></use>
+                                        </svg>
+                                        <svg class="icon-play">
+                                            <use xlink:href="./assets/images/sprite.svg#play"></use>
+                                        </svg>
+                                    </button>
+    
+                                     <button class="controls-button controls-next">
+                                        <svg class="icon-arrow">
+                                         <use xlink:href="./assets/images/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="controls-progress">
+                                <div class="progress">
+                                    <div class="progress-current"></div>
+                                </div>
+                            </div>
+
+                            <div class="timeline">
+                                <span class="timeline-start">00:31</span>
+                                <span class="timeline-end">03:31</span>
+                            </div>
+                    </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="./assets/js/scripts.js"></script>
+</body>
+</html>
