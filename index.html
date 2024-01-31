@@ -21,7 +21,7 @@
                 <div class="handling">
                     <div class="handling-song" title="Volume">
                         <svg class="icon-sound">
-                            <use xlink:href="./assets/images/sprite.svg#sound"></use>
+                            <!-- <use xlink:href="./assets/images/sprite.svg#sound"></use> -->
                         </svg>
 
                         <div class="volume"> 
@@ -39,13 +39,13 @@
 
                     <div class="handling-repeat" title="Repeat">
                         <svg class="icon-sound">
-                            <use xlink:href="./assets/images/sprite.svg#repeat"></use>
+                            <!-- <use xlink:href="./assets/images/sprite.svg#repeat"></use> -->
                         </svg>
                     </div>
 
                     <div class="handling-shuffle" title="Shuffle">
                         <svg class="icon-shuffle">
-                            <use xlink:href="./assets/images/sprite.svg#shuffle"></use>
+                            <!-- <use xlink:href="./assets/images/sprite.svg#shuffle"></use> -->
                         </svg>
                     </div>
                 </div>
@@ -69,22 +69,26 @@
                                 <div class="controls-buttons">
                                     <button class="controls-button controls-prev">
                                         <svg class="icon-arrow">
-                                            <use xlink:href="./assets/images/sprite.svg#arrow"></use>
+                                            <!-- <use xlink:href="./assets/images/sprite.svg#arrow"></use> -->
+                                            <img src="./assets/images/button_back.png"> 
                                         </svg>
                                     </button>
     
                                     <button class="controls-button controls-play">
-                                        <svg class="icon-pause">
-                                            <use xlink:href="./assets/images/sprite.svg#pause"></use>
-                                        </svg>
+                                        <!-- <svg class="icon-pause"> -->
+                                            <!-- <use xlink:href="./assets/images/sprite.svg#pause"></use>
+                                            
+                                        </svg> -->
                                         <svg class="icon-play">
-                                            <use xlink:href="./assets/images/sprite.svg#play"></use>
+                                            <!-- <use xlink:href="./assets/images/sprite.svg#play"></use> -->
+                                            <img src="./assets/images/button_play.png" id="button-play-pause" onclick="changeButton()"> 
                                         </svg>
                                     </button>
     
                                      <button class="controls-button controls-next">
                                         <svg class="icon-arrow">
-                                         <use xlink:href="./assets/images/sprite.svg#arrow"></use>
+                                         <!-- <use xlink:href="./assets/images/sprite.svg#arrow"></use> -->
+                                         <img src="./assets/images/button_back.png"> 
                                         </svg>
                                     </button>
                                 </div>
@@ -100,10 +104,45 @@
                                 <span class="timeline-start">00:31</span>
                                 <span class="timeline-end">03:31</span>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <p class="list-title">All songs</p>
+
+                        <div class="items">
+                            <!-- <div class="item">
+                                <div class="item-image">
+                                    <div
+                                        class="item-image"
+                                        style="background-image: url(./assets/images/beat1.jpg);"
+                                    ></div>
+                                </div>
+                                <div class="item-titles">
+                                    <h2 class="item-group">Rummstein</h2>
+                                    <div class="item-track">Fier</div>
+                                </div>
+
+                                <p class="item-duration">03:45</p>
+                                <p class="item-ginre">Rock</p>
+                                <button class="item-play">
+                                    <img src="./assets/images/button_play.png"/> 
+                                </button>
+                            </div> -->
+                        </div>
                     </div>
             </div>
         </main>
     </div>
     <script type="module" src="./assets/js/scripts.js"></script>
+    <script> 
+        function changeButton() {
+            let scrButton = document.getElementById('button-play-pause')
+                scrButton.src.split('/').pop() === 'button_pause.png'
+                    ? scrButton.src = './assets/images/button_play.png'
+                    : scrButton.src = './assets/images/button_pause.png'
+        }
+    </script>
+       
 </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-  background: #020f36;
+  background: #111010;
   font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
 }
@@ -98,7 +98,7 @@ svg {
 }
 .controls .icon-play {
   fill: #ff874a;
-  display: block;
+  display: contents;
   width: 40px;
   height: 40px;
 }
@@ -162,7 +162,7 @@ svg {
   align-items: center;
   justify-content: space-between;
 }
-.timeline-span {
+.timeline span {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
